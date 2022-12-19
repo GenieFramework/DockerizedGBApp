@@ -1,6 +1,8 @@
 using GenieFramework
 
-Genie.loadapp()
+@genietools
+
+GenieFramework.Genie.loadapp(pwd())
 
 include("packages.jl")
 using PrecompileSignatures
@@ -11,13 +13,11 @@ for p in PACKAGES
   Core.eval(@__MODULE__, Meta.parse("@precompile_signatures($p)"))
 end
 
-import Genie.Requests.HTTP
+import GenieFramework.Genie.Requests.HTTP
 
 @info "Hitting routes"
 
-Genie.Router.params!(:packages, "Genie, Stipple")
-
-for r in Genie.Router.routes()
+for r in GenieFramework.Genie.Router.routes()
   try
     r.action()
   catch
@@ -32,7 +32,7 @@ try
 catch
 end
 
-rts = Genie.Router.routes()
+rts = GenieFramework.Genie.Router.routes()
 
 try
   #TODO: Ask adrian if I should filter /geniepackagemanager/* /stippleui/* /_devtools_/* tobe hit by HTTP
