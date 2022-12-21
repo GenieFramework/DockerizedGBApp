@@ -185,9 +185,9 @@ version = "2.0.0"
 
 [[deps.GenieFramework]]
 deps = ["GarishPrint", "Genie", "GenieAutoReload", "GenieDevTools", "GeniePackageManager", "Reexport", "Revise", "Stipple", "StipplePlotly", "StippleUI"]
-git-tree-sha1 = "62328610f02bc68f48adf10d1287019128ac5c3e"
+git-tree-sha1 = "1b46d70c5fbfb41618eb3a29b0c2b62313535bfc"
 uuid = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
-version = "1.6.0"
+version = "1.7.0"
 
 [[deps.GeniePackageManager]]
 deps = ["Base64", "Genie", "Pkg"]
@@ -581,9 +581,9 @@ version = "0.13.2"
 
 [[deps.StippleUI]]
 deps = ["Colors", "DataFrames", "Dates", "Genie", "Stipple"]
-git-tree-sha1 = "8cb3feeec1897f04b26e42be54d8c84b87fbd610"
+git-tree-sha1 = "67abbf2fd04a9f79c455bbe9b7fa21f17683d176"
 uuid = "a3c5d34a-b254-4859-a8fa-b86abb7e84a3"
-version = "0.20.2"
+version = "0.21.2"
 
 [[deps.StringEncodings]]
 deps = ["Libiconv_jll"]
