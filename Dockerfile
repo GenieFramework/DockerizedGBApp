@@ -8,7 +8,7 @@ COPY . /home/genie/app
 WORKDIR /home/genie/app
 
 # C compiler for PackageCompiler
-# RUN apt-get update && apt-get install -y g++
+RUN apt-get update && apt-get install -y g++
 
 # configure permissions
 RUN chown -R genie:genie /home/
@@ -18,7 +18,7 @@ USER genie
 RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile();"
 
 # Compile app
-# RUN julia --project make.jl
+RUN julia --project make.jl
 
 # Precompile signatures
 # RUN julia --project precompile.jl
@@ -38,4 +38,4 @@ ENV WSPORT "8000"
 # ENV EARLYBIND "true"
 # run app
 # CMD ["bin/server"]
-ENTRYPOINT ["julia", "--project", "-e", "using GenieFramework; Genie.loadapp(); up(async=false);"]
+ENTRYPOINT ["julia", "--project", "--sysimage=sysimg.so", "-e", "using GenieFramework; Genie.loadapp(); up(async=false);"]
