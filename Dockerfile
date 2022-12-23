@@ -31,6 +31,7 @@ EXPOSE 8000
 EXPOSE 80
 # set up app environment
 ENV JULIA_DEPOT_PATH "/home/genie/.julia"
+ENV JULIA_REVISE = "off"
 ENV GENIE_ENV "prod"
 ENV GENIE_HOST "0.0.0.0"
 ENV PORT "8000"
