@@ -1,2 +1,11 @@
 [deps]
 GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
+PackageCompiler = "9b87118b-4619-50d2-8e1e-99f35a4d4d9d"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PrecompileSignatures = "91cefc8d-f054-46dc-8f8c-26e11d7c5411"
+
+[compat]
+GenieFramework = "1.6"
+PackageCompiler = "2"
+Pkg = "1"
+PrecompileSignatures = "3"
